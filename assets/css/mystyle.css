@@ -30,6 +30,11 @@
     background-color: lightskyblue
 }
 
+p-uru {
+  width: 80%;
+  margin: auto
+}
+
 .image-title-uru {
     width:100%;
     max-width:600px;
