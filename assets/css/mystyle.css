@@ -1,0 +1,54 @@
+/* Utilizo la font oficial de Marca Pais Uruguay */
+@font-face {
+    font-family: "urufont";
+    src: url('../fonts/urufont.woff2') format('woff2')
+  }
+
+/* Clase para que el body utilice la font oficial */
+.body-uru {
+    font-family: "urufont", 'Trebuchet MS', Calibri, Tahoma;
+}
+
+/* Colores oficiales Marca Pais Uruguay */
+.uruguay-blue {
+    color: rgb(0,47,108);
+  }
+
+.uruguay-yellow {
+    color: rgb(255,184,28);
+  }
+
+.uruguay-black {
+    color: rgb(0,0,0);
+  }
+
+  .uruguay-grey {
+    color: rgb(174,173,179);
+  }
+
+.navbar-uru {
+    background-color: lightskyblue
+}
+
+.image-title-uru {
+    width:100%;
+    max-width:600px;
+    height: 100%;
+    max-height: 175px;
+}
+
+
+
+.image-col {
+    width:100%;
+    max-width:35px;
+    height: 100%;
+    max-height: 35px;
+}
+
+.custom-img-bg {
+    background: url("../assets/img/bg-bricks.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+}

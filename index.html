@@ -6,24 +6,52 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Fundamental para responsive  -->
   <title>Conociendo Uruguay</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="./assets/css/mystyle.css" /> <!-- al ponerla debajo de boostrap, estas tienen prioridad-->  
 </head>
 
 <header>
-  <nav id="navigation">
-    <a href="#intro"> Inicio</a>
-    <a href="#geografia">Geografía</a>
-    <a href="#turismo">Turismo</a>
-    <a href="#futbol">Futbol</a>
-    <a href="https://es.wikipedia.org/wiki/Uruguay" target="_blank"> Wikipedia </a>
-  </nav>
+    <nav id="navigation" class="navbar navbar-expand-lg navbar-uru">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Uruguay</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a  class="nav-link font-weight-bold" href="#intro"> Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#geografia">Geografía</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#turismo">Turismo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#futbol">Futbol</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://es.wikipedia.org/wiki/Uruguay" target="_blank"> Wikipedia </a>
+            </li>            
+          </ul>
+        </div>
+      </div>
+    </nav>    
 </header>
 
-<body>
+<body class="body-uru">
 
-
-  <div>
-    <img width="700" height="250" src="./img/inicio_Uruguay.PNG" alt="Inicio" />
-    <h1 id="inicio"> <b> Conociendo Uruguay</b></h1>
+  <!-- Seccion Imagen y titulo-->
+  <section class="pt-4">
+    <div class="container pb-8">
+      <div class="text-center">
+        <img class="image-title-uru mx-auto" src="./assets/img/inicio_Uruguay.PNG" alt="Inicio" />
+      </div>
+    </div>
+      <h1 id="inicio" class="text-center mx-auto uruguay-blue"> <b> Conociendo Uruguay</b></h1>
+    </div>
+  </section>
 
     <p>Uruguay, cuyo nombre oficial es <b>República Oriental del Uruguay</b>, es un país soberano de América del Sur,
       situado en la parte oriental del Cono Sur. <br /> Su capital y ciudad más poblada es <a
@@ -57,7 +85,7 @@
 
     <div>
       <a href="https://es.wikipedia.org/wiki/Uruguay" target="_blank">
-        <img width="100" height="50" src="./img/Flag_of_Uruguay.png" alt="Bandera">
+        <img width="100" height="50" src="./assets/img/Flag_of_Uruguay.png" alt="Bandera">
       </a>
     </div>
 
@@ -133,8 +161,8 @@
       departamentos, 1200 km² comprende la suma de los lagos artificiales del río Negro, <br />​ 105 km² de las islas
       del río Uruguay y 16 799 km² de aguas jurisdiccionales (río Uruguay, río de la Plata y laguna Merín).</p>
 
-    <img src="./img/Uruguay_satelital.png" alt="Uruguay vista satelital">
-    <img src="./img/Uruguay_en_el_globo.png" alt="Uruguay en la region">
+    <img src="./assets/img/Uruguay_satelital.png" alt="Uruguay vista satelital">
+    <img src="./assets/img/Uruguay_en_el_globo.png" alt="Uruguay en la region">
 
     <p>Los principales límites geográficos de Uruguay son:</p>
 
@@ -174,7 +202,7 @@
 
     <h4>Principales logros de la Selección de Uruguay:
       <a href="https://www.auf.org.uy/" target="_blank">
-        <img width="30" height="30" src="./img/auf_escudo.png">
+        <img width="30" height="30" src="./assets/img/auf_escudo.png">
       </a>
     </h4>
 
@@ -218,72 +246,72 @@
       <tr>
         <td>1960</td>
         <td>Copa Libertadores de America</td>
-        <td>Peñarol <img width="18" height="20" src="./img/uruguay_peniarol.png"></td>
+        <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
       </tr>
       <tr>
         <td>1961</td>
         <td>Copa Libertadores de America</td>
-        <td>Peñarol <img width="18" height="20" src="./img/uruguay_peniarol.png"></td>
+        <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
       </tr>
       <tr>
         <td>1961</td>
         <td>Mundial de Clubes</td>
-        <td>Peñarol <img width="18" height="20" src="./img/uruguay_peniarol.png"></td>
+        <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
       </tr>
       <tr>
         <td>1966</td>
         <td>Copa Libertadores de America</td>
-        <td>Peñarol <img width="18" height="20" src="./img/uruguay_peniarol.png"></td>
+        <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
       </tr>
       <tr>
         <td>1966</td>
         <td>Mundial de Clubes</td>
-        <td>Peñarol <img width="18" height="20" src="./img/uruguay_peniarol.png"></td>
+        <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
       </tr>
       <tr>
         <td>1971</td>
         <td>Copa Libertadores de America</td>
-        <td>Nacional <img width="18" height="20" src="./img/nacional.png"></td>
+        <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
       </tr>
       <tr>
         <td>1971</td>
         <td>Mundial de Clubes</td>
-        <td>Nacional <img width="18" height="20" src="./img/nacional.png"></td>
+        <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
       </tr>
       <tr>
         <td>1980</td>
         <td>Copa Libertadores de America</td>
-        <td>Nacional <img width="18" height="20" src="./img/nacional.png"></td>
+        <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
       </tr>
       <tr>
         <td>1980</td>
         <td>Mundial de Clubes</td>
-        <td>Nacional <img width="18" height="20" src="./img/nacional.png"></td>
+        <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
       </tr>
       <tr>
         <td>1982</td>
         <td>Copa Libertadores de America</td>
-        <td>Peñarol <img width="18" height="20" src="./img/uruguay_peniarol.png"></td>
+        <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
       </tr>
       <tr>
         <td>1982</td>
         <td>Mundial de Clubes</td>
-        <td>Peñarol <img width="18" height="20" src="./img/uruguay_peniarol.png"></td>
+        <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
       </tr>
       <tr>
         <td>1987</td>
         <td>Copa Libertadores de America</td>
-        <td>Peñarol <img width="18" height="20" src="./img/uruguay_peniarol.png"></td>
+        <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
       </tr>
       <tr>
         <td>1988</td>
         <td>Copa Libertadores de America</td>
-        <td>Nacional <img width="18" height="20" src="./img/nacional.png"></td>
+        <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
       </tr>
       <tr>
         <td>1988</td>
         <td>Mundial de Clubes</td>
-        <td>Nacional <img width="18" height="20" src="./img/nacional.png"></td>
+        <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
       </tr>
     </table>
 
@@ -294,11 +322,13 @@
 
 </body>
 
-<footer>
-  <p>Author: Jorge Panzera</p>
-  <p><a href="mailto:panzera.jorge@gmail.com">panzera.jorge@gmail.com</a></p>
-  <br />
-  <p><a href="#navigation"> Volver al Inicio </a></p>
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-dark" href="https://github.com/jorgepanzera/03FrontEnd">Jorge Panzera</a>
+  </div>
+  <!-- Copyright -->
 </footer>
 
 </html>
