@@ -72,32 +72,32 @@
     <div class="container">
       
       <div class="row pb-3">
-        <div class="marca-pais-left img-responsive">
+        <div class="m-uru-subtitle-left img-responsive">
           <img width="45px" height="45px" src="/assets/img/uruicono.png" >
         </div>
-        <div class="marca-pais-right">
+        <div class="m-uru-subtitle-right">
             <h3 class="uruguay-blue">Clima</h3>
             <div class="w-25 linea-uru-subtitle" ></div>
             <div class="clearfix"></div>
         </div>
       </div>
 
-      <p>Tiene clima templado con una temperatura media de 17,5 °C, siendo enero el mes más cálido, con una media de 22,6
+      <p class="p-justify">Tiene clima templado con una temperatura media de 17,5 °C, siendo enero el mes más cálido, con una media de 22,6
         °C, y julio el mes más frío, con una media de 10,6 °C.18​ <br /> Las lluvias son abundantes y varían de los casi
         1000 mm por año en el sur a los 1500 mm en el norte, en la frontera con Brasil. Las precipitaciones tienen también
         variaciones estacionales, siendo los meses de otoño y primavera los que registran precipitaciones más abundantes.
       </p>
   
-      <p>Los principales recursos económicos son la agricultura, la forestación y la ganadería. <br /> Los recursos
+      <p class="p-justify">Los principales recursos económicos son la agricultura, la forestación y la ganadería. <br /> Los recursos
         minerales y energéticos son escasos, y las principales industrias son las del papel, el cartón, el cemento y la
         refinería de petróleo.</p>
   
-      <p>Según las Naciones Unidas, es el país de América Latina con el nivel de alfabetización más alto. <br /> Según la
+      <p class="p-justify">Según las Naciones Unidas, es el país de América Latina con el nivel de alfabetización más alto. <br /> Según la
         organización Transparencia Internacional, Uruguay ocupa el lugar 21 en la lista de países con menor Índice de
         Percepción de Corrupción siendo el segundo mejor ubicado de América, por detrás de Canadá, que ocupa el lugar 11.
       </p>
   
-      <p>La Corporación Latinobarómetro, en un estudio realizado en 2008, lo sitúa como el país más pacífico de América
+      <p class="p-justify">La Corporación Latinobarómetro, en un estudio realizado en 2008, lo sitúa como el país más pacífico de América
         Latina.26​27​ Además, según la revista estadounidense International Living es el mejor de Latinoamérica para
         vivir.</p>
   
@@ -115,71 +115,89 @@
 
 
   <!-- Seccion Turismo-->
-  <section id="turismo" class="pt-3" >
+  <section id="turismo" class="pt-3 pb-4" >
     <div class="container" >
 
         <div class="row">
-          <div class="marca-pais-left img-responsive">
+          <div class="m-uru-subtitle-left img-responsive">
             <img width="45px" height="45px" src="/assets/img/uruicono.png" >
           </div>
-          <div class="marca-pais-right">
+          <div class="m-uru-subtitle-right">
               <h3 class="uruguay-blue">Turismo</h3>
               <div class="w-25 linea-uru-subtitle" ></div>
               <div class="clearfix"></div>
           </div>
         </div>
     
-        <p></p>Uruguay tiene varios destinos turísticos entre los que se destacan las costas sobre el Río de la Plata y el
+        <p class="p-justify"></p>Uruguay tiene varios destinos turísticos entre los que se destacan las costas sobre el Río de la Plata y el
         Oceano Atlántico. Existe también el turismo de sierras y campo, principalmente las Sierras de Minas y diversas estancias turísticas
           que muestran las tradiciones del habitante rural del Uruguay.</p>
     
-        <h4> Los principales destinos turísticos son: </h4>
+          <div class="row pt-3 pb-4" > <!--class row necesaria para dividir un grid en columnas-->
+            <!-- como quiero 2 columnas en ancho maximo de pantalla (xl) y boostrap trabaja con 12 columnas por default => col-xl-6
+            que representan 2 columnas de ancho 6 = 12 columnas, luego ajustar medium y movil col-md-6 y col-12-->
+            <div class="col-xl-6 col-md-8 col-12 text-start">
+              <h5> Los principales destinos turísticos son: </h5>
     
-        <ol>
-          <li><a href="https://es.wikipedia.org/wiki/Punta_del_Este" target="_blank">Punta del Este</a> - Playas y Ocio</li>
-          <li><a href="https://es.wikipedia.org/wiki/Montevideo" target="_blank">Montevideo</a> - Historia y playas</li>
-          <li><a href="https://es.wikipedia.org/wiki/Colonia_del_Sacramento" target="_blank">Colonia del Sacramento</a> -
-            Turismo histórico y gastronómico </li>
-          <li><a href="https://es.wikipedia.org/wiki/Balnearios_de_Uruguay" target="_blank">Balnearios de Uruguay</a> - 500
-            km. de costa oceánica </li>
-        </ol>
-    
-        <h5>Si desea recibir más información sobre ofertas turísticas en Uruguay, llene los siguientes datos</h5>
-    
-        <div>
-          <form action="./turismo.html">
-            <div>
-              <label for="name">Nombre:</label><br>
-              <input type="text" id="name" name="name" placeholder="Ingrese Nombre y Apellido"><br>
+              <ol>
+                <li><a href="https://es.wikipedia.org/wiki/Punta_del_Este" target="_blank">Punta del Este</a> - Playas y Ocio</li>
+                <li><a href="https://es.wikipedia.org/wiki/Montevideo" target="_blank">Montevideo</a> - Historia y playas</li>
+                <li><a href="https://es.wikipedia.org/wiki/Colonia_del_Sacramento" target="_blank">Colonia del Sacramento</a> -
+                  Turismo histórico y gastronómico </li>
+                <li><a href="https://es.wikipedia.org/wiki/Balnearios_de_Uruguay" target="_blank">Balnearios de Uruguay</a> - 500
+                  km. de costa oceánica </li>
+              </ol>
+
             </div>
-            <div>
-              <label for="email">Email:</label><br>
-              <input type="text" id="email" name="email" placeholder="Ingrese email"><br><br>
-            </div>
-            <div>
-              <label for="aceptacion"> Acepto recibir información adicional</label>
-              <input type="checkbox" id="aceptacion" name="aceptacion"> <br /><br />
-            </div>
-            <div>
-              <input type="submit" value="Enviar">
-            </div>
-          </form>
-        </div>
+            <div class="col-xl-6 col-md-8 col-12 text-center pb-2">
+              <h5>Si desea recibir más información sobre ofertas turísticas en Uruguay, llene los siguientes datos</h5>
     
-    
+              <div>
+                <form action="./turismo.html">
+                  <div class="row" >
+                    <div class="col-3">
+                      <label for="name">Nombre:</label>
+                    </div>
+                    <div class="col-9 text-start">
+                      <input class="w-75" type="text" id="name" name="name" placeholder="Ingrese Nombre y Apellido"><br>
+                    </div>                    
+                  </div>
+                  <br/>
+                  <div class="row" >
+                    <div class="col-3">
+                      <label for="email">Email:</label>
+                    </div>
+                    <div class="col-9 text-start">
+                      <input class="w-75" type="text" id="email" name="email" placeholder="Ingrese email"><br><br>
+                    </div>                    
+                  </div>                  
+
+                  <div>
+                    <label for="aceptacion"> Acepto recibir información adicional</label>
+                    <input type="checkbox" id="aceptacion" name="aceptacion"> <br /><br />
+                  </div>
+                  <div>
+                    <input type="submit" value="Enviar">
+                  </div>
+                </form>
+              </div>
+            </div>  
+
+          </div> <!-- termina row de 2 columnas-->
+
     
         <p><em>Estructura política</em></p>
     
-        <p>La República Oriental del Uruguay es un Estado unitario democrático y descentralizado de carácter
+        <p class="p-justify">La República Oriental del Uruguay es un Estado unitario democrático y descentralizado de carácter
           presidencialista. </p>
     
-        <p>Según un informe publicado por la revista británica The Economist (El Economista), Uruguay es considerado el país
+        <p class="p-justify">Según un informe publicado por la revista británica The Economist (El Economista), Uruguay es considerado el país
           más plenamente democrático de Sudamérica, ubicado en el puesto 15 sobre un total de 167 naciones, siendo el más
           democrático de Latinoamérica. <br /> Y, además, es el segundo de América -por detrás de Canadá- en la tabla de los
           países con menor índice de percepción de corrupción (elaborado por la organización Transparencia Internacional).
         </p>
     
-        <p>Su gobierno se divide en tres poderes independientes: Poder Ejecutivo, Poder Legislativo y Poder Judicial.
+        <p class="p-justify">Su gobierno se divide en tres poderes independientes: Poder Ejecutivo, Poder Legislativo y Poder Judicial.
           Además, existen de tres organismos públicos autónomos de control: <br /> la Corte Electoral, el Tribunal de lo
           Contencioso Administrativo y el Tribunal de Cuentas de la República.</p>
     
@@ -190,176 +208,220 @@
   <!-- TerminaSeccion Turismo-->
 
 
+  <!-- Seccion Geografia-->
+
+  <section class="pb-4" id="geografia" >
+
+    <div class="container" >
+
+      <div class="row pb-3">
+        <div class="m-uru-subtitle-left img-responsive">
+          <img width="45px" height="45px" src="/assets/img/uruicono.png" >
+        </div>
+        <div class="m-uru-subtitle-right">
+            <h3 class="uruguay-blue">Geografia</h3>
+            <div class="w-25 linea-uru-subtitle" ></div>
+            <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <p class="p-justify">Tiene una superficie terrestre total de 176 215 km², de la que 175 015 km² es la suma total de los
+        departamentos, 1200 km² comprende la suma de los lagos artificiales del río Negro, 105 km² de las islas
+        del río Uruguay y 16 799 km² de aguas jurisdiccionales (río Uruguay, río de la Plata y laguna Merín).</p>
+
+        <div class="row justify-content-evenly pb-3">
+          <div class="col-3">
+            <img src="./assets/img/Uruguay_satelital.png" alt="Uruguay vista satelital" class="img-responsive" >
+          </div>
+          <div class="col-3">
+            <img src="./assets/img/Uruguay_en_el_globo.png" alt="Uruguay en la region" class="img-responsive "> 
+          </div>
+        </div>
 
 
+      <p>Los principales límites geográficos de Uruguay son:</p>
+
+      <ul>
+        <li>Norte y Este, con Brasil</li>
+        <li>Oeste, con Argentina</li>
+        <li>Sur, con el Océano Atlántico</li>
+      </ul>
+    
+    </div>
 
 
+  </section>
 
-  <div>
-    <h2 id="geografia"> Geografía </h2>
+  <!-- Termina Seccion Geografia-->
 
-    <p>Tiene una superficie terrestre total de 176 215 km²,2​ de la que 175 015 km² es la suma total de los
-      departamentos, 1200 km² comprende la suma de los lagos artificiales del río Negro, <br />​ 105 km² de las islas
-      del río Uruguay y 16 799 km² de aguas jurisdiccionales (río Uruguay, río de la Plata y laguna Merín).</p>
+  <!-- Seccion Futbol -->
+  <section id="futbol" >
+    <div class="container">
+      
+      <div class="row pb-3">
+        <div class="m-uru-subtitle-left img-responsive">
+          <img width="45px" height="45px" src="/assets/img/uruicono.png" >
+        </div>
+        <div class="m-uru-subtitle-right">
+            <h3 class="uruguay-blue">Futbol</h3>
+            <div class="w-25 linea-uru-subtitle" ></div>
+            <div class="clearfix"></div>
+        </div>
+      </div>
 
-    <img src="./assets/img/Uruguay_satelital.png" alt="Uruguay vista satelital">
-    <img src="./assets/img/Uruguay_en_el_globo.png" alt="Uruguay en la region">
+      <div class="pb-3">
+        <p class="p-justify"> El fútbol en Uruguay es por amplio margen el deporte más popular y es reconocido como un «país futbolizado»
+          porque forma parte de su identidad nacional. </p>
 
-    <p>Los principales límites geográficos de Uruguay son:</p>
+        <p class="p-justify">Es practicado tanto a nivel profesional como aficionado, desde niños (baby fútbol) hasta veteranos. Actualmente
+          el fútbol uruguayo de mayores está organizado por la Asociación Uruguaya de Fútbol (AUF), fundada el 30 de marzo
+          de 1900, tanto en la rama masculina como femenina</p>
 
-    <ul>
-      <li>Norte y Este, con Brasil</li>
-      <li>Oeste, con Argentina</li>
-      <li>Sur, con el Océano Atlántico</li>
-    </ul>
+        <p>Se estima que existen en Uruguay unos 160 mil futbolistas, de los cuales el 6,5% son mujeres. El estilo de
+          juego aplicado tradicionalmente por los futbolistas uruguayos es denominado «garra charrúa», de carácter
+          individual improvisado. </p>
 
+        ​ <p class="p-justify">La Selección de fútbol de Uruguay ha obtenido dos Campeonatos Mundiales en 1930 y 1950, las medallas de oro
+          conseguidas en los Juegos Olímpicos de 1924​ y en 1928, asi como 15 ediciones de la Copa América </p>
 
-  </div>
+        <p class="p-justify"> Este profuso palmarés contrasta con la escasa población del país (3,5 millones de habitantes).</p>
 
-  <div>
-    <h2 id="futbol"> Futbol !! </h2>
+        <p class="p-justify">Los dos grandes equipos, el Club Atlético Peñarol y el Club Nacional de Football ganaron en total ocho ediciones
+          de la Copa Libertadores y seis de la Copa Intercontinental.</p>
 
-    <p> El fútbol en Uruguay es por amplio margen el deporte más popular y es reconocido como un «país futbolizado»
-      porque forma parte de su identidad nacional. </p>
+        <p class="p-justify">El Estadio Centenario que fue sede de la Copa Mundial de Fútbol de 1930 fue reconocido por la FIFA como Monumento
+          Histórico del Fútbol Mundial.</p>
 
-    <p>Es practicado tanto a nivel profesional como aficionado, desde niños (baby fútbol) hasta veteranos. Actualmente
-      el fútbol uruguayo de mayores está organizado por la Asociación Uruguaya de Fútbol (AUF), fundada el 30 de marzo
-      de 1900, tanto en la rama masculina como femenina</p>
+      <div class="row pt-3 pb-4 justify-content-center" > <!--class row necesaria para dividir un grid en columnas-->
+        <!-- como quiero 2 columnas en ancho maximo de pantalla (xl) y boostrap trabaja con 12 columnas por default => col-xl-6
+        que representan 2 columnas de ancho 6 = 12 columnas, luego ajustar medium y movil col-md-6 y col-12-->
+        <div class="col-xl-6 col-md-8 col-12 text-center">
+          <h5> Principales logros de la Selección de Uruguay </h5>
 
-    <p>Se estima que existen en Uruguay unos 160 mil futbolistas, de los cuales el 6,5% son mujeres. El estilo de
-      juego aplicado tradicionalmente por los futbolistas uruguayos es denominado «garra charrúa», de carácter
-      individual improvisado. </p>
+          <table class="table table-dark table-striped table-sm mx-auto w-75">
+            <thead>
+              <th>Año</th>
+              <th>Torneo</th>
+              <th>Equipo</th>
+            </thead>
+            <tr>
+              <td>1924</td>
+              <td>Juegos Olímpicos</td>
+              <td>Uruguay </td>
+            </tr>
+            <tr>
+              <td>1928</td>
+              <td>Juegos Olímpicos</td>
+              <td>Uruguay</td>
+            </tr>
+            <tr>
+              <td>1930</td>
+              <td>Fifa Mundial Selecciones</td>
+              <td>Uruguay</td>
+            </tr>
+            <tr>
+              <td>1950</td>
+              <td>Fifa Mundial Selecciones</td>
+              <td>Uruguay</td>
+            </tr>
+          </table>
 
-    ​ <p>La Selección de fútbol de Uruguay ha obtenido dos Campeonatos Mundiales en 1930 y 1950, las medallas de oro
-      conseguidas en los Juegos Olímpicos de 1924​ y en 1928, asi como 15 ediciones de la Copa América </p>
+        </div>
 
-    <p> Este profuso palmarés contrasta con la escasa población del país (3,5 millones de habitantes).</p>
+        <div class="col-xl-6 col-md-8 col-12 text-center pb-2">
+          <h5> Principales logros de Equipos de Uruguay</h5>
 
-    <p>Los dos grandes equipos, el Club Atlético Peñarol y el Club Nacional de Football ganaron en total ocho ediciones
-      de la Copa Libertadores y seis de la Copa Intercontinental.</p>
+          <div>
+            <table class="table table-secondary table-striped table-sm mx-auto w-75">
+              <thead>
+                <th>Año</th>
+                <th>Torneo</th>
+                <th>Equipo</th>
+              </thead>
+              <tr>
+                <td>1960</td>
+                <td>Copa Libertadores de America</td>
+                <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
+              </tr>
+              <tr>
+                <td>1961</td>
+                <td>Copa Libertadores de America</td>
+                <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
+              </tr>
+              <tr>
+                <td>1961</td>
+                <td>Mundial de Clubes</td>
+                <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
+              </tr>
+              <tr>
+                <td>1966</td>
+                <td>Copa Libertadores de America</td>
+                <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
+              </tr>
+              <tr>
+                <td>1966</td>
+                <td>Mundial de Clubes</td>
+                <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
+              </tr>
+              <tr>
+                <td>1971</td>
+                <td>Copa Libertadores de America</td>
+                <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
+              </tr>
+              <tr>
+                <td>1971</td>
+                <td>Mundial de Clubes</td>
+                <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
+              </tr>
+              <tr>
+                <td>1980</td>
+                <td>Copa Libertadores de America</td>
+                <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
+              </tr>
+              <tr>
+                <td>1980</td>
+                <td>Mundial de Clubes</td>
+                <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
+              </tr>
+              <tr>
+                <td>1982</td>
+                <td>Copa Libertadores de America</td>
+                <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
+              </tr>
+              <tr>
+                <td>1982</td>
+                <td>Mundial de Clubes</td>
+                <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
+              </tr>
+              <tr>
+                <td>1987</td>
+                <td>Copa Libertadores de America</td>
+                <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
+              </tr>
+              <tr>
+                <td>1988</td>
+                <td>Copa Libertadores de America</td>
+                <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
+              </tr>
+              <tr>
+                <td>1988</td>
+                <td>Mundial de Clubes</td>
+                <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
+              </tr>
+            </table>
 
-    <p>El Estadio Centenario que fue sede de la Copa Mundial de Fútbol de 1930 fue reconocido por la FIFA como Monumento
-      Histórico del Fútbol Mundial.</p>
+          </div>
+        </div>  
 
-    <h4>Principales logros de la Selección de Uruguay:
-      <a href="https://www.auf.org.uy/" target="_blank">
-        <img width="30" height="30" src="./assets/img/auf_escudo.png">
-      </a>
-    </h4>
+      </div> <!-- termina row de 2 columnas-->
 
-    <table>
-      <thead>
-        <th>Año</th>
-        <th>Torneo</th>
-        <th>Equipo</th>
-      </thead>
-      <tr>
-        <td>1924</td>
-        <td>Juegos Olímpicos</td>
-        <td>Uruguay </td>
-      </tr>
-      <tr>
-        <td>1928</td>
-        <td>Juegos Olímpicos</td>
-        <td>Uruguay</td>
-      </tr>
-      <tr>
-        <td>1930</td>
-        <td>Fifa Mundial Selecciones</td>
-        <td>Uruguay</td>
-      </tr>
-      <tr>
-        <td>1950</td>
-        <td>Fifa Mundial Selecciones</td>
-        <td>Uruguay</td>
-      </tr>
-    </table>
+    </div> <!-- container -->
 
+</section>
 
-    <h4>Principales logros de Equipos de Uruguay:</h4>
+  <!-- Termina Seccion Futbol -->
 
-    <table>
-      <thead>
-        <th>Año</th>
-        <th>Torneo</th>
-        <th>Equipo</th>
-      </thead>
-      <tr>
-        <td>1960</td>
-        <td>Copa Libertadores de America</td>
-        <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
-      </tr>
-      <tr>
-        <td>1961</td>
-        <td>Copa Libertadores de America</td>
-        <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
-      </tr>
-      <tr>
-        <td>1961</td>
-        <td>Mundial de Clubes</td>
-        <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
-      </tr>
-      <tr>
-        <td>1966</td>
-        <td>Copa Libertadores de America</td>
-        <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
-      </tr>
-      <tr>
-        <td>1966</td>
-        <td>Mundial de Clubes</td>
-        <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
-      </tr>
-      <tr>
-        <td>1971</td>
-        <td>Copa Libertadores de America</td>
-        <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
-      </tr>
-      <tr>
-        <td>1971</td>
-        <td>Mundial de Clubes</td>
-        <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
-      </tr>
-      <tr>
-        <td>1980</td>
-        <td>Copa Libertadores de America</td>
-        <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
-      </tr>
-      <tr>
-        <td>1980</td>
-        <td>Mundial de Clubes</td>
-        <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
-      </tr>
-      <tr>
-        <td>1982</td>
-        <td>Copa Libertadores de America</td>
-        <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
-      </tr>
-      <tr>
-        <td>1982</td>
-        <td>Mundial de Clubes</td>
-        <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
-      </tr>
-      <tr>
-        <td>1987</td>
-        <td>Copa Libertadores de America</td>
-        <td>Peñarol <img width="18" height="20" src="./assets/img/uruguay_peniarol.png"></td>
-      </tr>
-      <tr>
-        <td>1988</td>
-        <td>Copa Libertadores de America</td>
-        <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
-      </tr>
-      <tr>
-        <td>1988</td>
-        <td>Mundial de Clubes</td>
-        <td>Nacional <img width="18" height="20" src="./assets/img/nacional.png"></td>
-      </tr>
-    </table>
-
-
-  </div>
-
-  <br /><br /><br />
+  <br />
 
 </body>
 

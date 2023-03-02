@@ -48,17 +48,16 @@ p-uru {
   height: auto;
 }
 
-.marca-pais-left {
+.m-uru-subtitle-left {
   width: 50px;
   float: left
 }
 
-.marca-pais p {
-  font-size: 16px;
-  text-align: justify
+.p-justify p {
+  text-justify: auto;
 }
 
-.marca-pais-right {
+.m-uru-subtitle-right {
   width: calc(100% - 50px);
   float: right
 }
