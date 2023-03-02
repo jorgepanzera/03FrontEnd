@@ -42,7 +42,31 @@ p-uru {
     max-height: 175px;
 }
 
+.image-flag-uru {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+}
 
+.marca-pais-left {
+  width: 50px;
+  float: left
+}
+
+.marca-pais p {
+  font-size: 16px;
+  text-align: justify
+}
+
+.marca-pais-right {
+  width: calc(100% - 50px);
+  float: right
+}
+
+.linea-uru-subtitle {
+  height: 5px;
+  background-color: rgb(255,184,28);
+}
 
 .image-col {
     width:100%;
