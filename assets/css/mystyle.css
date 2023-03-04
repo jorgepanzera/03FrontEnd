@@ -30,9 +30,27 @@
     background-color: lightskyblue
 }
 
-p-uru {
-  width: 80%;
-  margin: auto
+.m-uru-subtitle-left {
+  width: 50px;
+  float: left
+}
+
+.m-uru-subtitle-right {
+  width: calc(100% - 50px);
+  float: right
+}
+
+
+.linea-uru-subtitle {
+  height: 5px;
+  background-color: rgb(255,184,28);
+  width: 25%;
+}
+
+
+.section-uru {
+  margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 .image-title-uru {
@@ -48,24 +66,6 @@ p-uru {
   height: auto;
 }
 
-.m-uru-subtitle-left {
-  width: 50px;
-  float: left
-}
-
-.p-justify p {
-  text-justify: auto;
-}
-
-.m-uru-subtitle-right {
-  width: calc(100% - 50px);
-  float: right
-}
-
-.linea-uru-subtitle {
-  height: 5px;
-  background-color: rgb(255,184,28);
-}
 
 .image-col {
     width:100%;
@@ -74,9 +74,3 @@ p-uru {
     max-height: 35px;
 }
 
-.custom-img-bg {
-    background: url("../assets/img/bg-bricks.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat:no-repeat;
-}
