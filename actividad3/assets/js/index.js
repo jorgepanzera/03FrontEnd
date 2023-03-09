@@ -1,4 +1,26 @@
+import { movies } from "./data.js"
+
+let genreKey = 'Sci-Fi'
+
+let result = []
+for (let i=0; i < movies.length; i++){
+  if ( movies[i].genre.includes(genreKey)  ) {
+      result.push(movies[i])
+  }
+}
+
+//let result = movies.find(o => o.genre.includes('Adventure'))
+//let result = movies.includes('Adventure', 0)
+
+console.log(result)
+
+/*
 window.addEventListener('DOMContentLoaded', function() {
+  
+  
+  
+
+  
   const tweetButton = document.querySelector("#create-tweet-button")
   const titleInput = document.querySelector("#title-input")
   const descriptionInput = document.querySelector("#description-input")
@@ -52,6 +74,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
       titleInput.value = ""
       descriptionInput.value = ""
+      
     }
   })
 })
+  */
