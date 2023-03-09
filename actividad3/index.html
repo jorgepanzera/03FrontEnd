@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="container d-flex justify-content-around">
+
+    <div class="tweet-container me-4"></div>
+
+    <div class="ms-4">
+      <h1 style="font-weight: 700;">Previsualiza tu tweet!</h1>
+      <hr>
+      <form id="tweet-form">
+        <div class="form-group">
+          <label for="title">Título</label>
+          <input id="title-input" type="text" class="form-control mb-3 mt-2" id="title" aria-describedby="emailHelp" placeholder="Enter title">
+        </div>
+        <div class="form-group">
+          <label for="description">Descripción</label>
+          <input id="description-input" type="text" class="form-control mb-3 mt-2" id="description" aria-describedby="emailHelp" placeholder="Enter description">
+        </div>
+        <button id="create-tweet-button" type="submit" class="btn btn-primary w-100">Previsualizar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./assets/js/index.js" ></script>
+</body>
+</html>
