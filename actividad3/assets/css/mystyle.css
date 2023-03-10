@@ -1,4 +1,10 @@
 
+movie-title {
+  font-weight: 400;
+  font-family: 'Secular One', sans-serif;
+  color:rgb()
+}
+
 .tweet-container {
   padding: 1rem 2rem;
   min-width: 400px;
@@ -8,11 +14,7 @@
 }
 
 body {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
+background-color:  rgb(211, 211, 211);
 }
 
 /* the title and the twitter handle */

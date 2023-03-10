@@ -1,5 +1,6 @@
 import { movies } from "./data.js"
 
+/*
 let genreKey = 'Sci-Fi'
 
 let result = []
@@ -11,16 +12,41 @@ for (let i=0; i < movies.length; i++){
 
 //let result = movies.find(o => o.genre.includes('Adventure'))
 //let result = movies.includes('Adventure', 0)
+*/
 
-console.log(result)
+const findMoviesByGenre = (genreKey) => {
+  let result = []
+  for (let i=0; i < movies.length; i++){
+    if ( movies[i].genre.includes(genreKey)  ) {
+        result.push(movies[i])
+    }
+  }
+  return result
+}
 
-/*
-window.addEventListener('DOMContentLoaded', function() {
-  
-  
-  
 
+window.addEventListener('DOMContentLoaded', () => {
   
+  // obtener elementos de la pantalla
+  const genreList = document.getElementById("genreDataList")
+  const findButton = document.querySelector("#find-movies")
+  const moviesFinded = document.getElementById("movies-found")
+
+  // Validaciones de los inputs
+  
+  // listener para el boton de findMovies
+  findButton.addEventListener('click', (event) => {
+    event.preventDefault()
+
+    const genreToFind = genreList.value
+    
+    let moviesResult = findMoviesByGenre(genreToFind)
+
+    moviesFinded.innerHTML = moviesResult
+
+  })
+
+  /*
   const tweetButton = document.querySelector("#create-tweet-button")
   const titleInput = document.querySelector("#title-input")
   const descriptionInput = document.querySelector("#description-input")
@@ -77,5 +103,6 @@ window.addEventListener('DOMContentLoaded', function() {
       
     }
   })
-})
   */
+})
+  
