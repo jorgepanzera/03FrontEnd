@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const findButton = document.querySelector("#find-movies")
   const moviesFinded = document.getElementById("movies-found")
 
-  // Validaciones de los inputs
+  // FALTAN ****** Validaciones de los inputs
   
   // listener para el boton de findMovies
   findButton.addEventListener('click', (event) => {
