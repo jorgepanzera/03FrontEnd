@@ -1,4 +1,4 @@
-import { movies } from "./data.js"
+import { movies } from "./data.js";
 
 /*
 let genreKey = 'Sci-Fi'
@@ -15,36 +15,86 @@ for (let i=0; i < movies.length; i++){
 */
 
 const findMoviesByGenre = (genreKey) => {
-  let result = []
-  for (let i=0; i < movies.length; i++){
-    if ( movies[i].genre.includes(genreKey)  ) {
-        result.push(movies[i])
+  let result = [];
+  for (let i = 0; i < movies.length; i++) {
+    if (movies[i].genre.includes(genreKey)) {
+      result.push(movies[i]);
     }
   }
-  return result
-}
+  return result;
+};
 
-
-window.addEventListener('DOMContentLoaded', () => {
+const generateMoviesTable = (filteredMovies) => {
   
+  // Obtener titulos de las columnas
+  let col = [];
+  for (let i = 0; i < filteredMovies.length; i++) {
+    for (let key in filteredMovies[i]) {
+      if (col.indexOf(key) === -1) {
+        col.push(key)
+      }
+    }
+  }
+
+  // Crear Table
+  const table = document.createElement("table")
+
+  // Crear table header row usando los titulos obtenidos
+  let tr = table.insertRow(-1); // table row.
+
+  for (let i = 0; i < col.length; i++) {
+    if (i !== 4) {
+      let th = document.createElement("th"); // table header.
+      th.innerHTML = col[i].toLocaleUpperCase()
+      tr.appendChild(th)
+    }
+    
+  }
+
+  // Agregar rows con los datos de las peliculas
+  for (let i = 0; i < filteredMovies.length; i++) {
+    tr = table.insertRow(-1);
+
+    for (let j = 0; j < col.length; j++) {
+      if (j!==4) {
+        let tabCell = tr.insertCell(-1)
+        tabCell.innerHTML = filteredMovies[i][col[j]]
+      }
+    }
+  }
+
+  return table
+
+};
+
+window.addEventListener("DOMContentLoaded", () => {
   // obtener elementos de la pantalla
-  const genreList = document.getElementById("genreDataList")
-  const findButton = document.querySelector("#find-movies")
-  const moviesFinded = document.getElementById("movies-found")
+  const genreList = document.getElementById("genreDataList");
+  const findButton = document.querySelector("#find-movies");
+  const divShowMovies = document.getElementById("movies-found");
 
   // FALTAN ****** Validaciones de los inputs
-  
+
   // listener para el boton de findMovies
-  findButton.addEventListener('click', (event) => {
+  findButton.addEventListener("click", (event) => {
     event.preventDefault()
 
     const genreToFind = genreList.value
-    
+
     let moviesResult = findMoviesByGenre(genreToFind)
 
-    moviesFinded.innerHTML = moviesResult
+    // Agregar data al div container
+    divShowMovies.innerHTML = ""
 
-  })
+    let moviesTable = generateMoviesTable(moviesResult)
+
+    moviesTable.classList.add('movie-table')
+    moviesTable.classList.add('table-responsive')
+    divShowMovies.classList.add('text-center')
+
+    divShowMovies.appendChild(moviesTable);
+
+  });
 
   /*
   const tweetButton = document.querySelector("#create-tweet-button")
@@ -104,5 +154,4 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   })
   */
-})
-  
+});

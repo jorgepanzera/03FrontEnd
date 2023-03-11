@@ -1,20 +1,42 @@
 
-movie-title {
-  font-weight: 400;
+.movie-title {
+  font-weight: 300;
   font-family: 'Secular One', sans-serif;
   color:rgb()
 }
 
-.tweet-container {
-  padding: 1rem 2rem;
-  min-width: 400px;
-  border-radius: 1.5rem;
-  user-select: none;
-  border: 1px solid rgb(211, 211, 211);
-}
 
 body {
 background-color:  rgb(211, 211, 211);
+}
+
+/* Para la tabla de movies */
+.movie-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.movie-table td, .movie-table th {
+  border: 1px solid rgb(221, 221, 221);
+  padding: 8px;
+}
+
+.movie-table tr:nth-child(even){
+  background-color: rgb(242, 242, 242);
+}
+
+/* cambiar en hover */
+.movie-table tr:hover {
+  background-color: rgb(122, 223, 216);;
+}
+
+.movie-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(4, 170, 109);
+  color: white;
 }
 
 /* the title and the twitter handle */
