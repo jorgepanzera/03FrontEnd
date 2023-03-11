@@ -89,8 +89,10 @@ window.addEventListener("DOMContentLoaded", () => {
     let moviesTable = generateMoviesTable(moviesResult)
 
     moviesTable.classList.add('movie-table')
+    moviesTable.classList.add('mx-auto')
     moviesTable.classList.add('table-responsive')
-    divShowMovies.classList.add('text-center')
+    
+    
 
     divShowMovies.appendChild(moviesTable);
 
