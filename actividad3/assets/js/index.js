@@ -79,6 +79,12 @@ window.addEventListener("DOMContentLoaded", () => {
   findButton.addEventListener("click", (event) => {
     event.preventDefault()
 
+
+    // ** IDEA A DESARROLLAR - que el titulo vaya cambiando de color/text
+    // - We are searching your movies !! orange
+    // - You take care of Popcorn !! yellow
+    // - OK {name}, here it is !!  green like table ?
+
     const genreToFind = genreList.value
 
     let moviesResult = findMoviesByGenre(genreToFind)
@@ -88,12 +94,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
     let moviesTable = generateMoviesTable(moviesResult)
 
-    moviesTable.classList.add('movie-table')
-    moviesTable.classList.add('mx-auto')
-    moviesTable.classList.add('table-responsive')
+    moviesTable.classList.add('movie-table') // aspecto
+    moviesTable.classList.add('mx-auto') // margenes
+    moviesTable.style.overflowX = "auto" // responsive
     
-    
-
     divShowMovies.appendChild(moviesTable);
 
   });
