@@ -1,19 +1,5 @@
 import { movies } from "./data.js";
 
-/*
-let genreKey = 'Sci-Fi'
-
-let result = []
-for (let i=0; i < movies.length; i++){
-  if ( movies[i].genre.includes(genreKey)  ) {
-      result.push(movies[i])
-  }
-}
-
-//let result = movies.find(o => o.genre.includes('Adventure'))
-//let result = movies.includes('Adventure', 0)
-*/
-
 const findMoviesByGenre = (genreKey) => {
   let result = [];
   for (let i = 0; i < movies.length; i++) {
@@ -25,19 +11,18 @@ const findMoviesByGenre = (genreKey) => {
 };
 
 const generateMoviesTable = (filteredMovies) => {
-  
   // Obtener titulos de las columnas
   let col = [];
   for (let i = 0; i < filteredMovies.length; i++) {
     for (let key in filteredMovies[i]) {
       if (col.indexOf(key) === -1) {
-        col.push(key)
+        col.push(key);
       }
     }
   }
 
   // Crear Table
-  const table = document.createElement("table")
+  const table = document.createElement("table");
 
   // Crear table header row usando los titulos obtenidos
   let tr = table.insertRow(-1); // table row.
@@ -45,10 +30,9 @@ const generateMoviesTable = (filteredMovies) => {
   for (let i = 0; i < col.length; i++) {
     if (i !== 4) {
       let th = document.createElement("th"); // table header.
-      th.innerHTML = col[i].toLocaleUpperCase()
-      tr.appendChild(th)
+      th.innerHTML = col[i].toLocaleUpperCase();
+      tr.appendChild(th);
     }
-    
   }
 
   // Agregar rows con los datos de las peliculas
@@ -56,15 +40,44 @@ const generateMoviesTable = (filteredMovies) => {
     tr = table.insertRow(-1);
 
     for (let j = 0; j < col.length; j++) {
-      if (j!==4) {
-        let tabCell = tr.insertCell(-1)
-        tabCell.innerHTML = filteredMovies[i][col[j]]
+      if (j !== 4) {
+        let tabCell = tr.insertCell(-1);
+        tabCell.innerHTML = filteredMovies[i][col[j]];
       }
     }
   }
 
-  return table
+  return table;
+};
 
+function wait(waitTime) {
+  // implementa un wait
+
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(true); // resolve the promise con el waitTime
+    }, waitTime); // waitTime (miliseconds)
+  });
+}
+
+const PlayWithElements = async (title, name) => {
+  // ** IDEA A DESARROLLAR - que el titulo vaya cambiando de color/text
+  // - We are searching your movies !! orange
+  // - You take care of Popcorn !! yellow
+  // - OK {name}, here it is !!  green like table ?
+
+  console.log(title)
+
+  title.innerHTML = "We are searching your movies...";
+  
+
+  await wait(1500);
+
+  title.innerHTML = "You can take care of Popcorn !!";
+
+  await wait(1500);
+
+  title.innerHTML = `OK ${name}, enjoy !!`;
 };
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -72,34 +85,32 @@ window.addEventListener("DOMContentLoaded", () => {
   const genreList = document.getElementById("genreDataList");
   const findButton = document.querySelector("#find-movies");
   const divShowMovies = document.getElementById("movies-found");
+  const mainTitle = document.getElementById("maintitle");
+  const name = document.getElementById("name-input")
+  const age = document.getElementById("age-input")
 
   // FALTAN ****** Validaciones de los inputs
 
   // listener para el boton de findMovies
-  findButton.addEventListener("click", (event) => {
-    event.preventDefault()
+  findButton.addEventListener("click", async (event) => {
+    event.preventDefault();
 
+    const genreToFind = genreList.value;
+    
+    await PlayWithElements(mainTitle, name.value);
 
-    // ** IDEA A DESARROLLAR - que el titulo vaya cambiando de color/text
-    // - We are searching your movies !! orange
-    // - You take care of Popcorn !! yellow
-    // - OK {name}, here it is !!  green like table ?
-
-    const genreToFind = genreList.value
-
-    let moviesResult = findMoviesByGenre(genreToFind)
+    let moviesResult = findMoviesByGenre(genreToFind);
 
     // Agregar data al div container
-    divShowMovies.innerHTML = ""
+    divShowMovies.innerHTML = "";
 
-    let moviesTable = generateMoviesTable(moviesResult)
+    let moviesTable = generateMoviesTable(moviesResult);
 
-    moviesTable.classList.add('movie-table') // aspecto
-    moviesTable.classList.add('mx-auto') // margenes
-    moviesTable.style.overflowX = "auto" // responsive
-    
+    moviesTable.classList.add("movie-table"); // aspecto
+    moviesTable.classList.add("mx-auto"); // margenes
+    moviesTable.style.overflowX = "auto"; // responsive
+
     divShowMovies.appendChild(moviesTable);
-
   });
 
   /*
