@@ -31,6 +31,7 @@ const generateMoviesTable = (filteredMovies, cantToFind) => {
     if (i !== 4) {
       let th = document.createElement("th"); // table header.
       th.innerHTML = col[i].toLocaleUpperCase();
+      th.classList.add("text-center");
       tr.appendChild(th);
     }
   }
@@ -67,7 +68,7 @@ function wait(waitTime) {
 }
 
 const PlayWithElements = async (title, name) => {
-  // ** IDEA  - que el titulo vaya cambiando de color/text
+  // ** IDEA  - que el titulo vaya cambiando de texto
   // - We are searching your movies !! orange
   // - You take care of Popcorn !! yellow
   // - OK {name}, here it is !!  green like table ?
@@ -85,13 +86,12 @@ const PlayWithElements = async (title, name) => {
   title.innerHTML = `OK ${name}, enjoy !!`;
 };
 
-
 const cleanScreen = () => {
-  divShowMovies.innerHTML = ""
-  genreList.value = "Choose"
-  cantMoviesWanted.value = "0"
-  findButton.value = "Find Movies"
-}
+  divShowMovies.innerHTML = "";
+  genreList.value = "Choose";
+  cantMoviesWanted.value = "0";
+  findButton.textContent = "Find Movies";
+};
 
 window.addEventListener("DOMContentLoaded", () => {
   // obtener elementos de la pantalla
@@ -100,94 +100,57 @@ window.addEventListener("DOMContentLoaded", () => {
   const divShowMovies = document.getElementById("movies-found");
   const mainTitle = document.getElementById("maintitle");
   const name = document.getElementById("name-input");
-  const cantMoviesWanted = document.getElementById("countDataList");
-
-  // FALTAN ****** Validaciones de los inputs
+  const cantMoviesList = document.getElementById("countDataList");
 
   // listener para el boton de findMovies
   findButton.addEventListener("click", async (event) => {
     event.preventDefault();
 
+    // inicializar
+    let okToFind = true;
+
+    name.classList.remove('is-invalid')
+    genreList.classList.remove("is-invalid")
+    cantMoviesList.classList.remove("is-invalid")
+
     divShowMovies.innerHTML = "";
 
     const genreToFind = genreList.value;
-    const cantMoviesToFind = Number(cantMoviesWanted.value);
+    const cantMoviesToFind = Number(cantMoviesList.value);
 
-    console.log(cantMoviesToFind);
+    // Chequear datos ingresados
+    if (name.value === "") {
+      name.classList.add('is-invalid')
+      okToFind = false;
+    }
 
-    await PlayWithElements(mainTitle, name.value);
+    if (genreToFind === "Choose...") {
+      genreList.classList.add("is-invalid");
+      okToFind = false;
+    }
 
-    let moviesResult = findMoviesByGenre(genreToFind, cantMoviesToFind);
+    if (cantMoviesToFind == 0) {
+      cantMoviesList.classList.add("is-invalid");
+      okToFind = false;
+    }
 
-    // Agregar data al div container
-    
+    // Todo Ok, buscar
+    if (okToFind) {
 
-    let moviesTable = generateMoviesTable(moviesResult, cantMoviesToFind);
+      
+      await PlayWithElements(mainTitle, name.value);
 
-    moviesTable.classList.add("movie-table"); // aspecto
-    moviesTable.classList.add("mx-auto"); // margenes
-    moviesTable.style.overflowX = "auto"; // responsive
+      let moviesResult = findMoviesByGenre(genreToFind, cantMoviesToFind);
 
-    divShowMovies.appendChild(moviesTable);
+      // Agregar data al div container
+      let moviesTable = generateMoviesTable(moviesResult, cantMoviesToFind);
 
+      moviesTable.classList.add("movie-table"); // aspecto
+      moviesTable.classList.add("mx-auto"); // margenes
+      moviesTable.style.overflowX = "auto"; // responsive
+
+      divShowMovies.appendChild(moviesTable);
+    }
   });
 
-  /*
-  const tweetButton = document.querySelector("#create-tweet-button")
-  const titleInput = document.querySelector("#title-input")
-  const descriptionInput = document.querySelector("#description-input")
-  const tweetContainer = document.querySelector('.tweet-container')
-  const allInputs = document.querySelectorAll('input')
-
-  allInputs.forEach(input => {
-    input.addEventListener('change', function(event) {
-      if (event.target.value !== "") {
-        input.classList.remove('is-invalid')
-      }
-    })
-  })
-
-  tweetButton.addEventListener('click', function(event) {
-    event.preventDefault()
-
-    const title = titleInput.value
-    const description = descriptionInput.value
-
-    if (title === "") {
-      titleInput.classList.add('is-invalid')
-    }
-
-    if (description === "") {
-      descriptionInput.classList.add('is-invalid')
-    }
-
-    if (title !== "" && description !== "") {
-      titleInput.classList.remove('is-invalid')
-      descriptionInput.classList.remove('is-invalid')
-
-        tweetContainer.innerHTML = `
-          <div class="title">
-            <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="tweet">
-            <div class="info">
-              <h4 id="tweet-title" class="name">${title}</h4>
-              <p class="twitter-handle">@tweetoftheday</p>
-            </div>
-          </div>
-          <div class="tweet">
-            <p id="tweet-description">${description}</p>
-          </div>
-          <div class="time-and-date">
-            <p>3:30 PM &middot; June 29, 2021 <span>Twitter for iPhone</span></p>
-          </div>
-          <div class="bottom-section d-flex justify-content-end">
-            <div id="like-button" class="btn">Like <i class="fa fa-heart"></i></div>
-          </div>
-      `
-
-      titleInput.value = ""
-      descriptionInput.value = ""
-      
-    }
-  })
-  */
 });
