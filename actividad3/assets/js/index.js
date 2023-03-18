@@ -10,7 +10,7 @@ const findMoviesByGenre = (genreKey) => {
   return result;
 };
 
-const generateMoviesTable = (filteredMovies) => {
+const generateMoviesTable = (filteredMovies, cantToFind) => {
   // Obtener titulos de las columnas
   let col = [];
   for (let i = 0; i < filteredMovies.length; i++) {
@@ -36,7 +36,13 @@ const generateMoviesTable = (filteredMovies) => {
   }
 
   // Agregar rows con los datos de las peliculas
-  for (let i = 0; i < filteredMovies.length; i++) {
+  // hasta la cantidad elegida, o todos
+  let cantMovies = filteredMovies.length;
+  if (cantToFind < 1000) {
+    cantMovies = cantToFind;
+  }
+
+  for (let i = 0; i < cantMovies; i++) {
     tr = table.insertRow(-1);
 
     for (let j = 0; j < col.length; j++) {
@@ -61,15 +67,14 @@ function wait(waitTime) {
 }
 
 const PlayWithElements = async (title, name) => {
-  // ** IDEA A DESARROLLAR - que el titulo vaya cambiando de color/text
+  // ** IDEA  - que el titulo vaya cambiando de color/text
   // - We are searching your movies !! orange
   // - You take care of Popcorn !! yellow
   // - OK {name}, here it is !!  green like table ?
 
-  console.log(title)
+  console.log(title);
 
   title.innerHTML = "We are searching your movies...";
-  
 
   await wait(1500);
 
@@ -80,14 +85,22 @@ const PlayWithElements = async (title, name) => {
   title.innerHTML = `OK ${name}, enjoy !!`;
 };
 
+
+const cleanScreen = () => {
+  divShowMovies.innerHTML = ""
+  genreList.value = "Choose"
+  cantMoviesWanted.value = "0"
+  findButton.value = "Find Movies"
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   // obtener elementos de la pantalla
   const genreList = document.getElementById("genreDataList");
   const findButton = document.querySelector("#find-movies");
   const divShowMovies = document.getElementById("movies-found");
   const mainTitle = document.getElementById("maintitle");
-  const name = document.getElementById("name-input")
-  const age = document.getElementById("age-input")
+  const name = document.getElementById("name-input");
+  const cantMoviesWanted = document.getElementById("countDataList");
 
   // FALTAN ****** Validaciones de los inputs
 
@@ -95,22 +108,28 @@ window.addEventListener("DOMContentLoaded", () => {
   findButton.addEventListener("click", async (event) => {
     event.preventDefault();
 
-    const genreToFind = genreList.value;
-    
-    await PlayWithElements(mainTitle, name.value);
-
-    let moviesResult = findMoviesByGenre(genreToFind);
-
-    // Agregar data al div container
     divShowMovies.innerHTML = "";
 
-    let moviesTable = generateMoviesTable(moviesResult);
+    const genreToFind = genreList.value;
+    const cantMoviesToFind = Number(cantMoviesWanted.value);
+
+    console.log(cantMoviesToFind);
+
+    await PlayWithElements(mainTitle, name.value);
+
+    let moviesResult = findMoviesByGenre(genreToFind, cantMoviesToFind);
+
+    // Agregar data al div container
+    
+
+    let moviesTable = generateMoviesTable(moviesResult, cantMoviesToFind);
 
     moviesTable.classList.add("movie-table"); // aspecto
     moviesTable.classList.add("mx-auto"); // margenes
     moviesTable.style.overflowX = "auto"; // responsive
 
     divShowMovies.appendChild(moviesTable);
+
   });
 
   /*
