@@ -69,9 +69,9 @@ function wait(waitTime) {
 
 const PlayWithElements = async (title, name) => {
   // ** IDEA  - que el titulo vaya cambiando de texto
-  // - We are searching your movies !! orange
-  // - You take care of Popcorn !! yellow
-  // - OK {name}, here it is !!  green like table ?
+  // - We are searching your movies !! 
+  // - You take care of Popcorn !! 
+  // - OK {name}, here it is !!  
 
   console.log(title);
 
